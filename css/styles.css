@@ -241,50 +241,68 @@ button:focus,
   background-color: var(--tertiary-color);
 }
 
-.sun {
-  animation: 4s color-change infinite alternate linear;
+.svg {
+  margin: 100px;
 }
 
-.cloud-front {
-  animation: 30s cloud-move infinite alternate linear;
+.front-wheel-cap {
+  animation: 1s front-wheel-rotate infinite linear;
+  transform-origin: 452.22px 707.6px 139px;
 }
 
-.cloud-back {
-  animation: 34s cloud-move-reverse infinite alternate linear;
+.back-wheel-cap {
+  animation: 1s back-wheel-rotate infinite linear;
+  transform-origin: 1895.19px 707.6px 139px;
 }
 
-.tower-ball {
-  animation: 4s color-change infinite alternate linear;
+.car-body {
+  animation: .5s car-body-move infinite alternate linear;
 }
 
-@keyframes color-change {
-  0% {
-    fill: var(--background-color);
-  }
-  50% {
-    fill: var(--secondary-color);
-  }
-  100% {
-    fill: var(--tertiary-color);
-  }
+.astronaut-arm {
+  animation: 1s arm-move infinite alternate;
+  transform-origin: 1500px 100px;
 }
 
-@keyframes cloud-move {
+.tv {
+  animation: .5s tv-move infinite alternate;
+}
+
+@keyframes front-wheel-rotate {
+  0% {transform: rotate(0deg);}
+  100% {transform: rotate(-360deg);}
+}
+
+@keyframes back-wheel-rotate {
+  0% {transform: rotate(0deg);}
+  100% {transform: rotate(-360deg);}
+}
+
+@keyframes car-body-move {
   from {
-    transform: translate(0, 50px);
+    transform: translate(0px, 0px);
   }
   to {
-    transform: translate(200px, 50px);
+    transform: translate(0px, 5px);
   }
 }
 
-@keyframes cloud-move-reverse {
+@keyframes arm-move{
   from {
-    transform: translate(446px, 48px);
+    transform: translate(0px, 0px) rotate(0deg);
   }
   to {
-    transform: translate(100px, 48px);
+    transform: translate(0px, -5px) rotate(3deg);
   }
+}
+
+@keyframes tv-move{
+  from {
+    transform: translate(0px, 0px)
+  }
+  to {
+    transform: translate(0px, -5px)
+    }
 }
 
 @media all and (max-width: 500px) {
@@ -304,8 +322,5 @@ button:focus,
   .grid__item:last-child {
     grid-column: auto / auto;
     grid-row: auto / auto;
-  }
-  h1 {
-    font-size: var(--h3-font-size);
   }
 }
