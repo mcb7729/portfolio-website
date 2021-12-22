@@ -39,6 +39,11 @@ body {
   padding: 25px;
 }
 
+.grid-center {
+  margin: 0 auto;
+  text-align: center;
+}
+
 .paragraph-center {
   text-align: center;
   padding: 25px;
@@ -225,8 +230,10 @@ th {
   display: grid;
   /* grid-template-columns: 300px 300px 300px; fractions are better than pixels - they are responsive */
   grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: 33% 33% 33%;
   grid-gap: 20px;
   padding: 50px;
+  text-align: center;
 }
 
 .grid__item {
