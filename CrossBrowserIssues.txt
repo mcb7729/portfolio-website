@@ -1,0 +1,5 @@
+Issues found:
+
+I found numerous issues in Internet Explorer, which I attempted to fix by implementing fallback options for all of my colors. I did this until I realized IE was not one of the required browsers for the exercise and will no longer exist after June, 2022.
+
+I did not find any other issues that were specific to cross-browser support.
