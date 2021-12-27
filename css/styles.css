@@ -282,7 +282,7 @@ button:focus,
   /* reduces the opacity of the button to 80% */
   opacity: 0.8;
   color: #ccffff;
-  background-color: var(--a-hover-color);
+  background-color: var(--tertiary-color);
   color: #ccffff;
 }
 
