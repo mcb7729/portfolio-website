@@ -39,11 +39,6 @@ body {
   padding: 25px;
 }
 
-.grid-center {
-  margin: 0 auto;
-  text-align: center;
-}
-
 .paragraph-center {
   text-align: center;
   padding: 25px;
@@ -56,6 +51,10 @@ body {
   width: 100%;
   padding: 25px;
   border-bottom: 1px solid #0066cc;
+}
+
+.page-header-logo {
+  max-width: 200px;
 }
 
 .page-header__item {
@@ -98,6 +97,7 @@ body {
   color: #fff;
   background-color: var(--tertiary-color);
   background-color: #6633cc;
+  margin: 0 auto 200px auto;
 }
 
 .form {
@@ -219,24 +219,24 @@ th {
   margin: 0 auto;
 }
 
-/* start grid fallback */
-.grid__item {
- display: inline-block;
- width: 33%;
-}
-/* end grid fallback */
-
-.grid {
-  display: grid;
-  /* grid-template-columns: 300px 300px 300px; fractions are better than pixels - they are responsive */
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-template-columns: 33% 33% 33%;
-  grid-gap: 20px;
-  padding: 50px;
+.grid-center {
+  margin: 0 auto;
   text-align: center;
 }
 
+.grid {
+  display: grid;
+  width: 100%;
+  /* grid-template-columns: 300px 300px 300px; fractions are better than pixels - they are responsive */
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 20px;
+  padding: 50px;
+  text-align: center;
+  margin: 0 0 100px 0;
+}
+
 .grid__item {
+  display: inline-block;
   background-color: var(--tertiary-color);
   background-color: #6633cc;
   padding: 20px;
