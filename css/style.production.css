@@ -1,3 +1,10 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.3.6,
+* Autoprefixer: v10.3.1
+* Browsers: last 4 version
+*/
+
 body {
   background-color: #3366ff;
   background-color: #3366ff;
@@ -10,7 +17,8 @@ body {
 }
 
 * {
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 .center {
@@ -26,6 +34,8 @@ body {
 }
 
 .page-header {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   width: 100%;
   padding: 25px;
@@ -41,7 +51,9 @@ body {
 }
 
 .page-header__item:last-child {
-  flex-grow: 1;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
   text-align: right;
 }
 
@@ -189,8 +201,13 @@ th {
 
 .page-footer {
   clear: both;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   text-align: center;
   background-color: #0066cc;
   background-color: #0066cc;
@@ -211,9 +228,11 @@ th {
 }
 
 .grid {
+  display: -ms-grid;
   display: grid;
   width: 100%;
   /* grid-template-columns: 300px 300px 300px; fractions are better than pixels - they are responsive */
+  -ms-grid-columns: 1fr 20px 1fr 20px 1fr;
   grid-template-columns: 1fr 1fr 1fr;
   grid-gap: 20px;
   padding: 50px;
@@ -232,9 +251,13 @@ th {
 }
 
 .grid__item:last-child {
-  grid-column-start: 3;
+  -ms-grid-column: 3;
+      grid-column-start: 3;
+  -ms-grid-column-span: 0;
   grid-column-end: 3;
-  grid-row-start: 1;
+  -ms-grid-row: 1;
+      grid-row-start: 1;
+  -ms-grid-row-span: 2;
   grid-row-end: 3;
 }
 
@@ -255,8 +278,11 @@ th {
   border-radius: 50px;
   /* width of the border, type, color */
   border-bottom: 0px solid rgba(0, 0, 0, 0.3);
+  -webkit-transition: 0.5s color, background-color;
+  -o-transition: 0.5s color, background-color;
   transition: 0.5s color, background-color;
-  box-shadow: 2px 2px 10px #6633cc;
+  -webkit-box-shadow: 2px 2px 10px #6633cc;
+          box-shadow: 2px 2px 10px #6633cc;
 }
 
 button {
@@ -276,8 +302,11 @@ button {
   border-radius: 50px;
   /* width of the border, type, color */
   border-bottom: 0px solid rgba(0, 0, 0, 0.3);
+  -webkit-transition: 0.5s color, background-color;
+  -o-transition: 0.5s color, background-color;
   transition: 0.5s color, background-color;
-  box-shadow: 2px 2px 10px #6633cc;
+  -webkit-box-shadow: 2px 2px 10px #6633cc;
+          box-shadow: 2px 2px 10px #6633cc;
 }
 
 button:hover {
@@ -286,8 +315,8 @@ button:hover {
   /* reduces the opacity of the button to 80% */
   opacity: 0.8;
   color: #ccffff;
-  background-color: #6633cc;
-  color: #6633cc;
+  background-color: #ccffff;
+  color: #ccffff;
 }
 
 button:focus {
@@ -296,8 +325,8 @@ button:focus {
   /* reduces the opacity of the button to 80% */
   opacity: 0.8;
   color: #ccffff;
-  background-color: #6633cc;
-  color: #6633cc;
+  background-color: #ccffff;
+  color: #ccffff;
 }
 
 .button:hover {
@@ -306,8 +335,8 @@ button:focus {
   /* reduces the opacity of the button to 80% */
   opacity: 0.8;
   color: #ccffff;
-  background-color: #6633cc;
-  color: #6633cc;
+  background-color: #ccffff;
+  color: #ccffff;
 }
 
 .button:focus {
@@ -316,8 +345,8 @@ button:focus {
   /* reduces the opacity of the button to 80% */
   opacity: 0.8;
   color: #ccffff;
-  background-color: #6633cc;
-  color: #6633cc;
+  background-color: #ccffff;
+  color: #ccffff;
 }
 
 .svg {
@@ -330,72 +359,134 @@ button:focus {
 }
 
 .front-wheel-cap {
-  animation: 1s front-wheel-rotate infinite linear;
-  transform-origin: 452.22px 707.6px 139px;
+  -webkit-animation: 1s front-wheel-rotate infinite linear;
+          animation: 1s front-wheel-rotate infinite linear;
+  -webkit-transform-origin: 452.22px 707.6px 139px;
+      -ms-transform-origin: 452.22px 707.6px 139px;
+          transform-origin: 452.22px 707.6px 139px;
 }
 
 .back-wheel-cap {
-  animation: 1s back-wheel-rotate infinite linear;
-  transform-origin: 1895.19px 707.6px 139px;
+  -webkit-animation: 1s back-wheel-rotate infinite linear;
+          animation: 1s back-wheel-rotate infinite linear;
+  -webkit-transform-origin: 1895.19px 707.6px 139px;
+      -ms-transform-origin: 1895.19px 707.6px 139px;
+          transform-origin: 1895.19px 707.6px 139px;
 }
 
 .car-body {
-  animation: .5s car-body-move infinite alternate linear;
+  -webkit-animation: .5s car-body-move infinite alternate linear;
+          animation: .5s car-body-move infinite alternate linear;
 }
 
 .astronaut-arm {
-  animation: 1s arm-move infinite alternate;
-  transform-origin: 1500px 100px;
+  -webkit-animation: 1s arm-move infinite alternate;
+          animation: 1s arm-move infinite alternate;
+  -webkit-transform-origin: 1500px 100px;
+      -ms-transform-origin: 1500px 100px;
+          transform-origin: 1500px 100px;
 }
 
 .tv {
-  animation: .5s tv-move infinite alternate;
+  -webkit-animation: .5s tv-move infinite alternate;
+          animation: .5s tv-move infinite alternate;
+}
+
+@-webkit-keyframes front-wheel-rotate {
+  0% {-webkit-transform: rotate(0deg);transform: rotate(0deg);}
+  100% {-webkit-transform: rotate(-360deg);transform: rotate(-360deg);}
 }
 
 @keyframes front-wheel-rotate {
-  0% {transform: rotate(0deg);}
-  100% {transform: rotate(-360deg);}
+  0% {-webkit-transform: rotate(0deg);transform: rotate(0deg);}
+  100% {-webkit-transform: rotate(-360deg);transform: rotate(-360deg);}
+}
+
+@-webkit-keyframes back-wheel-rotate {
+  0% {-webkit-transform: rotate(0deg);transform: rotate(0deg);}
+  100% {-webkit-transform: rotate(-360deg);transform: rotate(-360deg);}
 }
 
 @keyframes back-wheel-rotate {
-  0% {transform: rotate(0deg);}
-  100% {transform: rotate(-360deg);}
+  0% {-webkit-transform: rotate(0deg);transform: rotate(0deg);}
+  100% {-webkit-transform: rotate(-360deg);transform: rotate(-360deg);}
+}
+
+@-webkit-keyframes car-body-move {
+  from {
+    -webkit-transform: translate(0px, 0px);
+            transform: translate(0px, 0px);
+  }
+  to {
+    -webkit-transform: translate(0px, 5px);
+            transform: translate(0px, 5px);
+  }
 }
 
 @keyframes car-body-move {
   from {
-    transform: translate(0px, 0px);
+    -webkit-transform: translate(0px, 0px);
+            transform: translate(0px, 0px);
   }
   to {
-    transform: translate(0px, 5px);
+    -webkit-transform: translate(0px, 5px);
+            transform: translate(0px, 5px);
+  }
+}
+
+@-webkit-keyframes arm-move{
+  from {
+    -webkit-transform: translate(0px, 0px) rotate(0deg);
+            transform: translate(0px, 0px) rotate(0deg);
+  }
+  to {
+    -webkit-transform: translate(0px, -5px) rotate(3deg);
+            transform: translate(0px, -5px) rotate(3deg);
   }
 }
 
 @keyframes arm-move{
   from {
-    transform: translate(0px, 0px) rotate(0deg);
+    -webkit-transform: translate(0px, 0px) rotate(0deg);
+            transform: translate(0px, 0px) rotate(0deg);
   }
   to {
-    transform: translate(0px, -5px) rotate(3deg);
+    -webkit-transform: translate(0px, -5px) rotate(3deg);
+            transform: translate(0px, -5px) rotate(3deg);
   }
+}
+
+@-webkit-keyframes tv-move{
+  from {
+    -webkit-transform: translate(0px, 0px);
+            transform: translate(0px, 0px)
+  }
+  to {
+    -webkit-transform: translate(0px, -5px);
+            transform: translate(0px, -5px)
+    }
 }
 
 @keyframes tv-move{
   from {
-    transform: translate(0px, 0px)
+    -webkit-transform: translate(0px, 0px);
+            transform: translate(0px, 0px)
   }
   to {
-    transform: translate(0px, -5px)
+    -webkit-transform: translate(0px, -5px);
+            transform: translate(0px, -5px)
     }
 }
 
 @media all and (max-width: 500px) {
   .grid {
+    -ms-grid-columns: 1fr;
     grid-template-columns: 1fr;
   }
 }
 @media all and (min-width: 500px) and (max-width: 750px){
   .grid {
+    -ms-grid-columns: 1fr 20px 1fr;
     grid-template-columns: 1fr 1fr;
   }
 }
