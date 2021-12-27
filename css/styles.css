@@ -282,8 +282,8 @@ button:focus,
   /* reduces the opacity of the button to 80% */
   opacity: 0.8;
   color: #ccffff;
-  background-color: var(--tertiary-color);
-  color: #6633cc;
+  background-color: var(--a-hover-color);
+  color: #ccffff;
 }
 
 .svg {
